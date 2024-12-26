@@ -13,16 +13,16 @@ NOTE: If you are having issues with permissions. And you get error:
     1. Find path by right-clicking a CSV file in VS Code and selecting “Copy Path”
 5. Paste the following into `PSQL Tool`, (with the CORRECT file path)
 
-\copy company_dim FROM '[Insert File Path]/company_dim.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\copy company_dim FROM '/Users/tenzinchokdup/Desktop/sql project data job analysis/csv_files/company_dim.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
-\copy skills_dim FROM '[Insert File Path]/skills_dim.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\copy skills_dim FROM '/Users/tenzinchokdup/Desktop/sql project data job analysis/csv_files/skills_dim.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
-\copy job_postings_fact FROM '[Insert File Path]/job_postings_fact.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\copy job_postings_fact FROM '/Users/tenzinchokdup/Desktop/sql project data job analysis/csv_files/job_postings_fact.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
-\copy skills_job_dim FROM '[Insert File Path]/skills_job_dim.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\copy skills_job_dim FROM '/Users/tenzinchokdup/Desktop/sql project data job analysis/csv_files/skills_job_dim.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 */
-
+SELECT * from company_dim
 -- NOTE: This has been updated from the video to fix issues with encoding
 
 COPY company_dim
@@ -40,3 +40,7 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 COPY skills_job_dim
 FROM '/Users/tenzinchokdup/Desktop/sql project data job analysis/csv_files/skills_job_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+
+select * 
+from job_postings_fact
+LIMIT 100
