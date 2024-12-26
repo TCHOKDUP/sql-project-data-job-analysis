@@ -41,6 +41,3 @@ COPY skills_job_dim
 FROM '/Users/tenzinchokdup/Desktop/sql project data job analysis/csv_files/skills_job_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
-select * 
-from job_postings_fact
-LIMIT 100
