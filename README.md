@@ -35,5 +35,38 @@ Each query is structured to answer specific aspect of the job market. Here's how
 
 ### What are the top-paying Data Analyst jobs?
 This query explores which specific roles or specializations within the field of data analysis command the highest salaries. By analyzing salary data, the project highlights the most lucrative opportunities for data analysts.
+``` sql
+SELECT
+    job_postings_fact.job_id,
+    job_postings_fact.job_title,
+    job_postings_fact.job_location,
+    job_postings_fact.job_schedule_type,
+    job_postings_fact.salary_year_avg,
+    job_postings_fact.job_posted_date,
+    company_dim.name as company_name
+FROM
+    job_postings_fact
+    LEFT JOIN company_dim on job_postings_fact.company_id = company_dim.company_id
+WHERE
+    job_title_short = 'Data Analyst' AND
+    job_location = 'Anywhere' AND
+    salary_year_avg is not null
+ORDER BY
+    salary_year_avg DESC
+LIMIT
+    10
+```
+The project analyzed job postings for data analyst positions across various companies. Key findings include:
+
+- Salary Range: Salaries for full-time data analyst roles range from $184,000 to $650,000 annually.
+- Job Levels: Positions vary from entry-level analysts to director-level roles.
+- Work Flexibility: Most jobs offer "Anywhere" location with some hybrid or remote options.
+- Recent Postings: Listings were posted throughout 2023, with the latest in December.
+These trends highlight a broad range of opportunities within the data analysis field, catering to different experience levels and offering flexible work arrangements.
+
+![top paying jobs](assets/1.png)
+*Bar graph to visualize the top paying jobs for data analysts; Chatgpt generated this graph from my SQL query result*
+
+
 # What I Learned
 # Conclusions
