@@ -56,6 +56,7 @@ ORDER BY
 LIMIT
     10
 ```
+
 The project analyzed job postings for data analyst positions across various companies. Key findings include:
 
 - **Salary Range:** Salaries for full-time data analyst roles range from $184,000 to $650,000 annually.
@@ -168,7 +169,8 @@ LIMIT 5
 - **Actionable Guidance:** Professionals can use this data to focus their learning and development efforts on skills that provide the best return on investment.
 - **Employer Preferences:** Companies' demand for specific skills reflects industry needs, helping educational programs and training initiatives target relevant areas.
 
-((((((((                            ))))))))
+![top skills based on salary](assets/4.png)
+*visualization for top skills based on salary; Chatgpt generated this graph from my SQL query result*
 
 ### What are the most optimal skills to learn(optimal:high demand and high paying)?
 This query explore which skills to learn at the beginning that will provide you with more job opportunities.
@@ -228,6 +230,15 @@ This query merges the two query from before to make a better code that will disp
 - **Balanced Skills:** Python, R, and AWS balance high demand with decent salaries.
 - **Specialized Roles:** Niche skills like Go and Hadoop offer higher salaries but lower demand.
 - **Emerging Technologies:** Cloud and data tools like AWS and Snowflake are growing in demand and salary.
+
+![Demand count by skills](assets/5(1).png)
+*Chatgpt generated this graph from my SQL query result*
+
+![Average salary by skill](assets/5(2).png)
+*Chatgpt generated this graph from my SQL query result*
+1. **Demand Count by Skill**: A bar chart showing the number of job postings or demand for each skill, with the most in-demand skills appearing on the left.
+2. **Average Salary by Skill:** A bar chart showing the average salary for each skill, with the highest-paying skills on the left.
+
 
 # What I Learned
 
